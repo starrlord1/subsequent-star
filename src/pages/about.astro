@@ -1,4 +1,6 @@
 ---
+const pageTitle = "About TechMurda";
+import '../styles/global.css';
 
 ---
 
@@ -11,11 +13,20 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<meta name="generator" content={Astro.generator} />
 
-        <title>TechMurda About</title>
+        <title>{pageTitle}</title>
     </head>
     <body>
 
-        <h1>About Me</h1>
+        <nav class="navbar">
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/blog">Blog</a></li>
+				<li><a href="/about">About</a></li>
+			</ul>
+		</nav>
+		
+
+        <h1>{pageTitle}</h1>
         <h2>TechMurda Blog</h2>
 
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum ab blanditiis reprehenderit asperiores, assumenda expedita! Sunt perferendis impedit cupiditate maiores pariatur odit placeat, alias explicabo fuga quidem. Eligendi, exercitationem inventore?</p>
