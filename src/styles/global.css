@@ -210,8 +210,8 @@ body{
 .socials a:hover, a:focus{
     background-color: black;
     border-color: wheat;
-    width: 200px;
-    height: 50px;
+    width: 350px;
+    height: 80px;
 }
 
 .socials a{
