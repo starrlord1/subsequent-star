@@ -1,5 +1,7 @@
 ---
+import Navigation from '../components/Navigation.astro';
 import '../styles/global.css';
+import Footer from '../components/Footer.astro';
 
 
 ---
@@ -8,7 +10,7 @@ import '../styles/global.css';
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta name="viewport" content="width=device-width, initial-scale=0.2"/>
 		<meta name="generator" content={Astro.generator} />
 		<title>TechMurda Chain</title>
 		<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -19,23 +21,19 @@ import '../styles/global.css';
 	<body>
 
 		<header class="header">
-			<a href="" class="logo">TechMurda.</a>
+			<a href="" style="--i:1;" class="logo">TechMurda.</a>
 
-
-			<nav class="navbar">
-				<a href="#">Home</a>
-				<a href="/blog">Blog</a>
-				<a href="/about">About</a>
-			</nav>
+			<Navigation/>
 
 			<div class="social-media">
-				<a href="#"><i class='bx bxl-twitter'></i></a>
-				<a href="#"><i class='bx bxl-facebook' ></i></a>
-				<a href="#"><i class='bx bxl-telegram' ></i></a>
+				<a href="https:www.twitter.com/techmurda"style="--i:1;"><i class='bx bxl-twitter'></i></a>
+				<a href="https://www.linkedin.com/in/william-h-0a62382a8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"style="--i:2;"><i class='bx bxl-linkedin' ></i></a>
+				<a href="https://t.me/techmurda_chain"style="--i:3;"><i class='bx bxl-telegram' ></i></a>
 			</div>
 		</header>
 
 		<section class="home">
+
 			<div class="home-content">
 				<h1>TechMurda Chain</h1>
 				<h3>Redefined!</h3>
@@ -50,5 +48,7 @@ import '../styles/global.css';
 			</div>
 
 		</section>
+
+		<Footer/>
 	</body>
 </html>

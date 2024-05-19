@@ -1,6 +1,8 @@
 ---
 const pageTitle = "About TechMurda";
 import '../styles/global.css';
+import Navigation from '../components/Navigation.astro';
+
 
 ---
 
@@ -15,23 +17,18 @@ import '../styles/global.css';
 
         <title>{pageTitle}</title>
     </head>
-    <body>
+	<body>
 
-        <nav class="navbar">
-			<ul>
-				<li><a href="/">Home</a></li>
-				<li><a href="/blog">Blog</a></li>
-				<li><a href="/about">About</a></li>
-			</ul>
-		</nav>
-		
+		<header class="header">
+			<a href="" style="--i:1;" class="logo">TechMurda.</a>
 
-        <h1>{pageTitle}</h1>
-        <h2>TechMurda Blog</h2>
+			<Navigation/>
 
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum ab blanditiis reprehenderit asperiores, assumenda expedita! Sunt perferendis impedit cupiditate maiores pariatur odit placeat, alias explicabo fuga quidem. Eligendi, exercitationem inventore?</p>
-
-        <p>We will update this site frequently so check back and see how the journey is going!</p>
-
-    </body>
+			<div class="social-media">
+				<a href="#"style="--i:1;"><i class='bx bxl-twitter'></i></a>
+				<a href="#"style="--i:2;"><i class='bx bxl-facebook' ></i></a>
+				<a href="#"style="--i:3;"><i class='bx bxl-telegram' ></i></a>
+			</div>
+		</header>
+	</body>
 </html>

@@ -1,9 +1,16 @@
-body{
+html{
     background-color: rgb(27,27,27)
 }
 
+body{
+    margin:auto;
+    width: 100%;
+    line-height: 2.0;
+    font-family: sans-serif;
+}
+
 *{
-    margin: 0;
+    margin: auto;
     padding: 0;
     box-sizing: border-box;
 }
@@ -13,7 +20,7 @@ body{
     top:0;
     left:0;
     width: 100%;
-    padding: 30px 8%;
+    padding: 30px 5%;
     background: transparent;
     display: flex;
     justify-content: space-between;
@@ -22,31 +29,49 @@ body{
 }
 
 .logo{
-    font-size: 20px;
+    font-size: 30px;
     text-decoration: none;
     font-weight: 300;
-    animation: slideRight 1s ease backwards;
+    animation: slideTop .8s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+    transition: .5s;
+    color: wheat;
 }
 
 .navbar a{
-    font-size: 18px;
-    color: wheat;
+    font-size: 23px;
+    color: rgb(144, 80, 190);
     text-decoration: none;
-    font-weight: 500;
-    margin: 0 20px;
+    font-weight: 800;
+    margin: 0 30px;
     transition: .8s;
     display: inline-flex;
     height: 20px;
+    animation: slideRight .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+    transition: .6s;
+    justify-content: center;
+    border: 80px solid transparent rgb(300, 222, 165);
+    padding: 0%;
+}
+
+.navbar a {
+    width: 50px;
+    height: 50px;
+    text-transform: uppercase;
+    transition: .5s;
 }
 
 .navbar a:hover, a:focus{
-    background-color:indigo;
-    border-color: wheat;
+    box-shadow: rgb(199, 82, 82) 0 5px 80px;
+    background-color: wheat;
+    width: 100px;
+    height: 50px;
 }
 
 .social-media{
-    width: 100px;
-    height: 20px;
+    width: 150px;
+    height: 50px;
     transition: .8s;
 }
 
@@ -54,19 +79,27 @@ body{
     display: inline-flex;
     width: 30px;
     height: 30px;
+    margin: 20px 50px;
     text-decoration: none;
     justify-content: center;
-    border: 2px solid transparent rgb(300, 222, 165);
+    border: 80px solid transparent rgb(300, 222, 165);
+    transition: .5s;
+    animation: slideSci 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+    padding:0%;
 }
 
-.social-media a:hover{
+.social-media a:hover, a:focus{
     background-color: wheat;
     border-color: wheat;
+    width: 50px;
+    height: 50px;
 }
 
 .social-media a i{
-    font-size: 20px;
-    color:indigo;
+    font-size: 50px;
+    color: rgb(186, 104, 245);
+
 }
 
 .home{
@@ -85,31 +118,34 @@ body{
 }
 
 .home-content h1{
-    font-size: 30px;
+    font-size: 50px;
     line-height: 2.0;
-}
-
-.home-content h3{
-    font-size: 20px;
     color: wheat;
 }
 
+.home-content h3{
+    font-size: 30px;
+    color: rgb(186, 104, 245);
+}
+
 .home-content p{
-    font-size: 16px;
+    font-size: 30px;
     margin: 15px 0 30px;
+    box-shadow: -100px -30px 1000px rgb(16, 11, 20);
+
 }
 
 .btn{
     display: inline-block;
     padding: 10px 28px;
-    background-color: rgb(221, 200, 162);
+    background-color: navajowhite;
     border-radius: 8px;
     box-shadow: 0 0 20px;
-    font-size: 15px;
-    color: indigo;
-    letter-spacing: 1.3px;
+    font-size: 30px;
+    color: rgb(195, 112, 255);
+    letter-spacing: 1.0px;
     text-decoration:none;
-    font-weight: 800;
+    font-weight: 900;
     transition: .5s;
 }
 
@@ -121,28 +157,85 @@ body{
     position: relative;
     width: 450px;
     height: 450px;
-    right: -7%;
+    right: -1%;
+    bottom: -5%;
 }
 
 .home-img .techmurda{
     position: absolute;
     width: 100%;
     height: fit-content;
-    box-shadow: -100px 10px 999px rgb(28, 2, 46);
+    right: -100
 }
 
 .home-img .techmurda img{
     max-width: 450px;
+    box-shadow: 100px -30px 1000px rgb(28, 2, 46);
 }
 
 
-@keyframes slideBottom{
+@keyframes slideTop{
     0%{
         transform: translateX(-1000px);
-        opacity: 1;
+        opacity: 0;
     }
     100%{
         transform: translateX(0);
-        opacity: 10;
+        opacity: 1;
     }
+}
+
+@keyframes slideRight{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideSci{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.socials a:hover, a:focus{
+    background-color: black;
+    border-color: wheat;
+    width: 200px;
+    height: 50px;
+}
+
+.socials a{
+    font-size: 25px;
+    color: rgb(102, 0, 175);
+    font-weight: 150px;
+    text-decoration: none;
+    animation: slideRight .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+    transition: .6s;
+    text-transform: uppercase;
+}
+
+.expanded{
+    display: unset;
+}
+
+@media screen and (min-width: 200px) {
+    .navbar{
+        margin-left: 5em;
+        display: block;
+        position: static;
+        width: auto;
+        background: none;
+    }
+    
 }
