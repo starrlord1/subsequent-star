@@ -181,6 +181,14 @@ nav{
     background-color: black;
 }
 
+.home p{
+    color: whitesmoke;
+}
+
+.home p b {
+    color:rgb(186, 104, 245);
+}
+
 .home-img{
     position: relative;
     width: 450px;
