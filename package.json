@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.7.0",
-    "astro": "^4.8.6",
+    "@vitejs/plugin-basic-ssl": "^1.1.0",
+    "astro": "^4.9.3",
     "boxicons": "^2.1.4",
     "typescript": "^5.4.5"
   }
