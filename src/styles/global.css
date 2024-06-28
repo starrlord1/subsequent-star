@@ -1,79 +1,64 @@
-html{
-    background-color: rgb(68, 68, 68)
-}
+html {
+    background-color: #eeeeee;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
 
-body{
-    margin:auto;
+
+  
+  body {
+    margin: 0 auto;
     width: 100%;
-    line-height: 2.0;
-    font-family: sans-serif;
-}
-
-*{
-    margin: auto;
-    outline: none;
-    border: none;
-    padding: 0;
+    max-width: 80ch;
+    padding: 1rem;
+    line-height: 1.5;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  * {
     box-sizing: border-box;
-}
+  }
 
-.header-logo{
-    font-size: 15px;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: wheat;
-    padding-right: 15px;
-}
+  
+  h1 {
+    margin: 1rem 0;
+    font-size: 2.5rem;
+    color:rgb(238, 204, 153);
+  }
+  
 
-.header{
-    position: relative;
-    top:0;
-    left:0;
-    width: 100%;
-    padding: 25px 10%;
-    background: transparent;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-    padding-top: 2rem;
-    gap: 5rem;
-}
 
-.logo{
+  /* NAV STYLES */
+  
+  .hamburger {
     padding-right: 20px;
-    font-size: 30px;
-    justify-content: center;
-    align-items: center;
+    cursor: pointer;
+  }
+  
+  .hamburger .line {
+    display: block;
+    width: 43px;
+    height: 3px;
+    margin-bottom: 10px;
+    background-color: burlywood;
+  }
+  
+  .nav-links {
+    width: 100%;
+    top: 5rem;
+    left: 48px;
+    background-color: #ff9776;
+    display: none;
+    margin: 0;
+  }
+  
+  .nav-links a {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
     text-decoration: none;
-    font-weight: 500;
-    animation: slideTop .8s ease forwards;
-    animation-delay: calc(.2s * var(--i));
-    transition: .5s;
-    color: wheat;
-    width:fit-content;
-}
-
-nav{
-    padding: 15px;
-    margin: auto;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-    padding-bottom: 1rem;
-    display: inline-flex;
-}
-
-.navbar a{
-    font-size: 25px;
-    color: rgb(144, 80, 190);
-    text-decoration: none;
-    font-weight: 800;
-    margin: 35px;
-    transition: .8s;
-    height: 40px;
-    width: 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
     animation: slideRight .5s ease forwards;
     animation-delay: calc(.2s * var(--i));
     transition: .4s;
@@ -81,197 +66,163 @@ nav{
     border: 80px solid transparent rgb(300, 222, 165);
     padding: 5px;
     transition: 0.3s ease;
-}
+    color: rgb(147, 88, 189);
+  }
 
-/*.navbar a {
-    width: 50px;
-    height: 50px;
-    text-transform: uppercase;
-    transition: .3s;
-}*/
-
-.navbar a:hover, a:focus{
-    box-shadow: rgb(199, 82, 82) 0 5px 80px;
+  
+  .nav-links a:hover,
+  .nav-links a:focus {
     background-color: wheat;
-    width: 100px;
-    height: 50px;
-}
+    box-shadow: rgb(153, 28, 28) 0 5px 20px;
+  }
+  
+  .expanded {
+    display: unset;
+  }
+  
+  @media screen and (min-width: 636px) {
+    .nav-links {
+      margin-left: 5em;
+      display: block;
+      position: static;
+      width: auto;
+      background: none;
+    }
+  
+    .nav-links a {
+      display: inline-block;
+      padding: 15px 20px;
+      border-radius: 10px;
+    }
+  
+    .hamburger {
+      display: none;
+    }
+  }
 
-.social-media{
-    width: 150px;
-    height: 50px;
-    transition: .8s;
-}
 
-.social-media a{
+  /*  Social Media  */
+  .social-media a{
     display: inline-block;
-    width: 30px;
-    height: 20px;
-    margin: 20px 50px;
-    text-decoration: none;
-    justify-content: center;
-    border: 80px solid transparent rgb(300, 222, 165);
-    transition: .5s;
-    animation: slideSci 1s ease forwards;
-    animation-delay: calc(.2s * var(--i));
-    padding:0%;
-}
-
-.social-media a:hover, a:focus{
+    padding: 15px 15px;
+    border-radius: 5px;
+  }
+  
+  .social-media a:hover,
+  .social-media a:focus{
     background-color: wheat;
-    border-color: wheat;
-    width: 50px;
-    height: 50px;
-}
-
-.social-media a i{
-    font-size: 30px;
-    color: rgb(186, 104, 245);
-}
-
-.home{
-    position: relative;
-    width: 100%;
-    height: 90vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 35px 5% 0;
-    overflow: hidden;
-    margin:auto;
-}
-
-.home-content{
-    max-width: 630px;
-}
-
-.home-content h1{
-    font-size: 50px;
-    line-height: 2.0;
-    color: wheat;
-}
-
-.home-content h3{
+    box-shadow: rgb(199, 82, 82) 0 2px 20px;
+  }
+  
+  .social-media a i{
     font-size: 25px;
     color: rgb(186, 104, 245);
+  }
+  
+
+  /*  DARK THEME  */
+  html.dark {
+    background-color: rgb(36, 40, 43);
+    color: rgb(255, 255, 255);
+  }
+
+
+  .dark .nav-links a {
+    color: rgb(196, 124, 247);
 }
 
-.home-content p{
-    font-size: 20px;
-    margin: 15px 0 15px;
-    box-shadow: -100px -30px 1000px rgb(16, 11, 20);
 
-}
+
+  /*  BUTTONS  */
 
 .btn{
-    display: inline-block;
-    padding: 10px 28px;
-    background-color: navajowhite;
-    border-radius: 8px;
-    box-shadow: 0 0 20px;
-    font-size: 30px;
-    color: rgb(195, 112, 255);
-    letter-spacing: 1.0px;
-    text-decoration:none;
-    font-weight: 900;
-    transition: .5s;
+  display: inline-block;
+  padding: 5px 8px;
+  padding-bottom: 10px;
+  background-color: rgb(255, 222, 162);
+  border-radius: 8px;
+  box-shadow: 0 0 20px;
+  font-size: 30px;
+  color: rgb(195, 112, 255);
+  text-decoration:none;
+  font-weight: 500;
+  transition: .5s;
 }
 
 .btn:hover{
-    background-color: black;
-}
-
-.home p{
-    color: whitesmoke;
-}
-
-.home p b {
-    color:rgb(186, 104, 245);
-}
-
-.home-img{
-    position: relative;
-    width: 450px;
-    height: 450px;
-    right: -1%;
-    bottom: -5%;
-}
-
-.home-img .techmurda{
-    position: absolute;
-    width: 100%;
-    height: fit-content;
-    right: -100
-}
-
-.home-img .techmurda img{
-    max-width: 450px;
-    box-shadow: 100px -30px 1000px rgb(28, 2, 46);
+  background-color: black;
 }
 
 
-@keyframes slideTop{
-    0%{
-        transform: translateX(-1000px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateX(0);
-        opacity: 1;
-    }
+  /*  IMAGE */
+
+.logo {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
 }
 
-@keyframes slideRight{
-    0%{
-        transform: translateX(100px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateX(0);
-        opacity: 1;
-    }
+.logo img{
+  width: fit-content;
+  box-shadow: -65px 5ch 1000px rgb(45, 4, 75);
+  opacity: 0.75;
+  z-index: -100;
+  border-radius: 20px;
 }
 
-@keyframes slideSci{
-    0%{
-        transform: translateX(100px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateX(0);
-        opacity: 1;
-    }
+.logo img{
+  width: 50vh;
+  height: 50vh;
 }
 
-.socials a:hover, a:focus{
-    background-color: black;
-    border-color: wheat;
-    width: 350px;
-    height: 80px;
+  /*  TOPIC CONTENT */
+
+.topic-content h1{
+  color:burlywood;
 }
 
-.socials a{
-    font-size: 25px;
-    color: whitesmoke;
-    font-weight: 150px;
-    text-decoration: none;
-    animation: slideRight .5s ease forwards;
-    animation-delay: calc(.2s * var(--i));
-    transition: .6s;
-    text-transform: uppercase;
+
+
+/*  CONTACT */
+
+.contact-box {
+  background-color:rgb(21, 28, 36);
+  padding: 20px;
+  border-radius: 10px;
 }
 
-.expanded{
-    display: unset;
+.contact-box select, textarea {
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
 }
 
-@media screen and (min-width: 200px) {
-    .navbar{
-        margin-left: 5em;
-        display: block;
-        position: static;
-        width: auto;
-        background: none;
-    }
-    
+
+input[type=submit] {
+  color: rgb(0, 0, 0);
+  padding: 12px;
+  cursor: pointer;
+  border: none;
+  
+}
+
+input[type=submit]:hover {
+  background-color: rgb(195, 112, 255);
+}
+
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 14px;
+}
+
+
+/*  HOME CONTENT  */
+
+.home-content h3{
+  color: rgb(195, 112, 255);
 }

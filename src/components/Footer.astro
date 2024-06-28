@@ -4,15 +4,23 @@ import Social from "./Social.astro";
 
 <style>
   footer {
-    display: flex;
-    gap: 1rem;
-    margin-top: 8rem;
-    font-size: 30px;
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 7rem;
   }
 </style>
 
 <footer>
-  <Social platform="Instagram" username="techmurda" />
-  <Social platform="Github" username="starrlord1" />
-  <Social platform="Youtube" username="@techmurda-chain" />
+  <div class="social-media">
+    <a href="https:www.twitter.com/techmurda" style="--i:1;"
+      ><i class="bx bxl-twitter"></i></a
+    >
+    <a
+      href="https://www.linkedin.com/in/william-h-0a62382a8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+      style="--i:2;"><i class="bx bxl-linkedin"></i></a
+    >
+    <a href="https://t.me/techmurdablog" style="--i:3;"
+      ><i class="bx bxl-telegram"></i></a
+    >
+</div>
 </footer>
