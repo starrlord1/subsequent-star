@@ -1,75 +1,60 @@
 ---
+import type { toCodes } from "astro:i18n";
 import BaseLayout from "../Layouts/BaseLayout.astro";
 
 const pageTitle = "About Me";
-const happy = true;
-const finished = true;
-const goal = 3;
-
 const identity = {
-  firstName: "Sarah",
-  country: "Canada",
+  firstName: "Will",
+  country: "America",
   occupation: "Technical Writer",
-  hobbies: ["photography", "birdwatching", "baseball"],
 };
 
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
+const skills = ["Certified in Cybersecurity", "Customer Service Management", "CRM & Data Management", "Certfied Cryptocurrency Expert", "Hospitality Management", "POS Systems", "HTML,CSS", "Sales & Lead Generation", "Team Leadership & Collaboration"];
 
-const skillColor = "navy";
 const fontWeight = "bold";
 const textCase = "uppercase";
 ---
 
-<style define:vars={{ skillColor, fontWeight, textCase }}>
-  h1 {
-    color: purple;
-    font-size: 4rem;
-  }
+<style define:vars={{fontWeight, textCase }}>
   .skill {
-    color: var(--skillColor);
+    color: rgb(195, 112, 255);
     font-weight: var(--fontWeight);
     text-transform: var(--textCase);
   }
 </style>
 
 <BaseLayout pageTitle={pageTitle}>
-  <h2>... and my new Astro site!</h2>
+  <h2>TechMurda Founder</h2>
 
   <p>
-    I am working through Astro's introductory tutorial. This is the second page
-    on my website, and it's the first one I built myself!
+    Currently expanding my technical and communication skills both spoken and written. My experience is predominatly customer service focused with an emphasis in hospitality management.
   </p>
 
   <p>
-    This site will update as I complete more of the tutorial, so keep checking
-    back and see how my journey is going!
+    I unofficially founded <b>TechMurda</b> at the age of 14 producing instrumentals. I started producing music not out of passion for it, but as a tool to channel the energy within that I was curious to understand. At the time I did see some success in selling these instrumentals via the internet. I eventually lost interest and began to focus on a career in hospitality which is how I worked my way into hospitality management out of High School. I had to undergo various transformations to get to who I am today, and for that I am gratful. 
   </p>
 
-  {happy && <p>I am happy to be learning Astro!</p>}
 
-  {finished && <p>I finished this tutorial!</p>}
+      <p>The <b>vision</b> overtime is to transform this organization into a conglomerate, focusing on providing IT Services such as:      </p>
+      <li>Cybersecurity Support</li> <li>Blockchain Consulting</li> <li>Semiconductor Manufacturing</li> <li>A.I Consulting</li> <li>Defense Contracting</li> <li>Cloud Storage Solutions</li> <li>Decentralized Physical Infrastructure</li>
 
-  {
-    goal === 3 ? (
-      <p>My goal is to finish in 3 days.</p>
-    ) : (
-      <p>My goal is not 3 days.</p>
-    )
-  }
+
+
+      <p>TechMurda will strive vigoursly to become a leader in providing educational resources to children in underserved areas who are interested in a career in growing fields such as Blockchain, A.I, & Cybersecurity. The aim would be to address future work shortages in these areas.<br>
+        <br>This would be achieved by developing an affilated Non-Profit organization with its entire infrastructure on the blockchain.  Donations made through the Non-Profit will be tracked via the blockchain, and contributors would be able to see exactly where the funds are going, who they're going to, as well as any updates in regards to how the funds were used.</p>
+  
+  
 
   <p>Here are a few facts about me:</p>
   <ul>
     <li>My name is {identity.firstName}.</li>
-    <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
+    <li>I live in {identity.country} working as a {identity.occupation}.</li>
+    <li>I am not an expert in anything. I am constantly learning, growing & evolving.</li>
     {
-      identity.hobbies.length >= 2 && (
-        <li>
-          Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}
-        </li>
-      )
+
     }
   </ul>
-  <p>My skills are:</p><p></p><ul>
+  <p>Skills & Certifications Include:</p><p></p><ul>
     {skills.map((skill) => <li class="skill">{skill}</li>)}
   </ul>
 </BaseLayout>
