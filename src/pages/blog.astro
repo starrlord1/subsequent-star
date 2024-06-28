@@ -1,33 +1,13 @@
 ---
+import BaseLayout from "../Layouts/BaseLayout.astro";
+import BlogPost from "../components/BlogPost.astro";
 const pageTitle = "TechMurda Blog";
-import '../styles/global.css';
-import Navigation from '../components/Navigation.astro';
-
-
+const allPosts = await Astro.glob("../pages/posts/*.md");
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/jpeg" href="/techmurda-logo.jpeg" />
-		<meta name="viewport" content="width=device-width, initial-scale=0.3"/>
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-		<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-		<link rel="stylesheet" href="global.css">
-
-	</head>
-	
-	<body>
-
-		<header class="header">
-			<Navigation/>
-
-			<div class="social-media">
-				<a href="https:www.twitter.com/techmurda"style="--i:1;"><i class='bx bxl-twitter'></i></a>
-				<a href="https://www.linkedin.com/in/william-h-0a62382a8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"style="--i:2;"><i class='bx bxl-linkedin' ></i></a>
-				<a href="https://t.me/techmurda_chain"style="--i:3;"><i class='bx bxl-telegram' ></i></a>
-			</div>
-		</header>
-	</body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+  <p>v1.0</p>
+  <ul>
+    {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
+  </ul>
+</BaseLayout>

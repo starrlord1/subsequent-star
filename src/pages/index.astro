@@ -1,65 +1,30 @@
 ---
-import Navigation from "../components/Navigation.astro";
-import "../styles/global.css";
-import Footer from "../components/Footer.astro";
+import BaseLayout from "../Layouts/BaseLayout.astro";
+import BlogPost from "../components/BlogPost.astro";
+import global from "../global.css";
+const pageTitle = "Home Page";
+const allPosts = await Astro.glob("../pages/posts/*.md");
 ---
+<BaseLayout>
+  
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/jpeg" href="/techmurda-logo.jpeg" />
-    <meta name="viewport" content="width=device-width, initial-scale=0.2" />
-    <meta name="generator" content={Astro.generator} />
-    <title>TechMurda</title>
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="global.css" />
-  </head>
+<section class="home">
+    <div class="home-content">
+         <h1>TechMurda</h1>
+         <h3>"The Vision"</h3>
+         <p>
+           <b>TechMurda</b> is all about empowering the future generations with the
+           knowledge and skills required to navigate the digital landscape, fostering
+           a secure and ethical digital space. This ensures a future where technology
+           will serve and guard humanity.
+         </p>
+         <a href="/Topics" class="btn">Explore Topics</a>
+    </div>
+</section>
 
-  <body>
-    <header class="header">
-      <Navigation />
+</BaseLayout>
 
-      <div class="social-media">
-        <a href="https:www.twitter.com/techmurda" style="--i:1;"
-          ><i class="bx bxl-twitter"></i></a
-        >
-        <a
-          href="https://www.linkedin.com/in/william-h-0a62382a8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-          style="--i:2;"><i class="bx bxl-linkedin"></i></a
-        >
-        <a href="https://t.me/+iBExYVsK53BjZTUx" style="--i:3;"
-          ><i class="bx bxl-telegram"></i></a
-        >
-      </div>
-    </header>
 
-    <section class="home">
-      <div class="home-content">
-        <h1>TechMurda Blog</h1>
-        <h3>"The Vision"</h3>
-        <p>
-          We dive deep into the intricacies of blockchain technologies including
-          blockchain security and cryptocurrencies. <br />
-          As our world becomes increasingly reliant on technology, responsible guardianship
-          is critical.
-          <b>TechMurda</b> is all about empowering the future generations with the
-          knowledge and skills required to navigate the digital landscape, fostering
-          a secure and ethical digital space. This ensures a future where technology
-          will serve and guard humanity.
-        </p>
-        <a href="#" class="btn">Explore Topics</a>
-      </div>
-
-      <div class="home-img">
-        <div class="techmurda">
-          <img src="/techmurda-logo.jpeg" alt="techmurda-logo.jpeg" />
-        </div>
-      </div>
-    </section>
-
-    <Footer />
-  </body>
-</html>
+<div class="logo">
+    <img src = "/techmurda-logo.jpeg" alt="TechMurda Logo">
+</div>

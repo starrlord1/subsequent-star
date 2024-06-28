@@ -1,34 +1,75 @@
 ---
-const pageTitle = "About TechMurda";
-import '../styles/global.css';
-import Navigation from '../components/Navigation.astro';
+import BaseLayout from "../Layouts/BaseLayout.astro";
 
+const pageTitle = "About Me";
+const happy = true;
+const finished = true;
+const goal = 3;
 
+const identity = {
+  firstName: "Sarah",
+  country: "Canada",
+  occupation: "Technical Writer",
+  hobbies: ["photography", "birdwatching", "baseball"],
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
+
+const skillColor = "navy";
+const fontWeight = "bold";
+const textCase = "uppercase";
 ---
 
+<style define:vars={{ skillColor, fontWeight, textCase }}>
+  h1 {
+    color: purple;
+    font-size: 4rem;
+  }
+  .skill {
+    color: var(--skillColor);
+    font-weight: var(--fontWeight);
+    text-transform: var(--textCase);
+  }
+</style>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/jpeg" href="/techmurda-logo.jpeg" />
-		<meta name="viewport" content="width=device-width, initial-scale=0.3"/>
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-		<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-		<link rel="stylesheet" href="global.css">
+<BaseLayout pageTitle={pageTitle}>
+  <h2>... and my new Astro site!</h2>
 
-	</head>
-	
-	<body>
+  <p>
+    I am working through Astro's introductory tutorial. This is the second page
+    on my website, and it's the first one I built myself!
+  </p>
 
-		<header class="header">
-			<Navigation/>
+  <p>
+    This site will update as I complete more of the tutorial, so keep checking
+    back and see how my journey is going!
+  </p>
 
-			<div class="social-media">
-				<a href="https:www.twitter.com/techmurda"style="--i:1;"><i class='bx bxl-twitter'></i></a>
-				<a href="https://www.linkedin.com/in/william-h-0a62382a8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"style="--i:2;"><i class='bx bxl-linkedin' ></i></a>
-				<a href="https://t.me/techmurda_chain"style="--i:3;"><i class='bx bxl-telegram' ></i></a>
-			</div>
-		</header>
-	</body>
-</html>
+  {happy && <p>I am happy to be learning Astro!</p>}
+
+  {finished && <p>I finished this tutorial!</p>}
+
+  {
+    goal === 3 ? (
+      <p>My goal is to finish in 3 days.</p>
+    ) : (
+      <p>My goal is not 3 days.</p>
+    )
+  }
+
+  <p>Here are a few facts about me:</p>
+  <ul>
+    <li>My name is {identity.firstName}.</li>
+    <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
+    {
+      identity.hobbies.length >= 2 && (
+        <li>
+          Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}
+        </li>
+      )
+    }
+  </ul>
+  <p>My skills are:</p><p></p><ul>
+    {skills.map((skill) => <li class="skill">{skill}</li>)}
+  </ul>
+</BaseLayout>

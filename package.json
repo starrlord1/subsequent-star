@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.7.0",
+    "@tonconnect/ui": "^2.0.3",
+    "@twa-dev/sdk": "^7.0.0",
     "@vitejs/plugin-basic-ssl": "^1.1.0",
-    "astro": "^4.9.3",
+    "astro": "^4.11.1",
     "boxicons": "^2.1.4",
     "typescript": "^5.4.5"
   }
