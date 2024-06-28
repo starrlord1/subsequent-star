@@ -1,12 +1,11 @@
 ---
 layout: ../../Layouts/MarkdownPostLayout.astro
-title: My Fourth Blog Post
-author: Astro Learner
-description: "This post will show up on its own!"
-image: 
-  url: "https://docs.astro.build/default-og-image.png"
-  alt: "The word astro against an illustration of planets and stars."
-pubDate: 2022-08-08
-tags: ["astro", "successes"]
+title:
+author: 
+description:
+image:
+  url: "https://docs.astro.build/assets/arc.webp"
+  alt: "Thumbnails of websites from the Astro Showcase site."
+pubDate: 2022-07-08
+tags: ["techmurda", "blogging", "blockchain", "cryptocurrency", "artificial intelligence", "technical writing", "tech murda", "cybersecurity", "blockchain security", "web3"]
 ---
-This post should show up with my other blog posts, because `Astro.glob()` is returning a list of all my posts in order to create my list.

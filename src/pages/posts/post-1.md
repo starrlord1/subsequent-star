@@ -1,29 +1,26 @@
 ---
 layout: ../../Layouts/MarkdownPostLayout.astro
-title: 'My First Blog Post'
-pubDate: 2022-07-01
-description: "This is the first post of my new Astro blog."
-author: "Astro Learner"
+title: 'The Ghost in the Machine'
+pubDate: 2024-06-01
+description: "Exploring the idea of A.I conciousness, the future of the technology and its relationship to humanity."
+author: "William Halsey"
 image:
-  url: "https://docs.astro.build/assets/full-logo-light.png"
-  alt: "The Astro logo with the word One."
-tags: ["astro", "blogging", "learning in public"]
+  url: "/techmurda-logo.jpeg"
+  alt: "techmurda-logo"
+tags: ["techmurda", "blogging", "blockchain", "cryptocurrency", "artificial intelligence", "technical writing", "tech murda", "cybersecurity", "blockchain security", "web3"]
+
 ---
 
-# My First Blog Post
+# The Ghost in the Machine: Can Humans Understand How Machines Think?
 
 Published on: 2022-07-01
 
-Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
 
-## What I've accomplished
 
-1. **Installing Astro**: First, I created a new Astro project and set up my online accounts.
+## I: Introduction
 
-2. **Making Pages**: I then learned how to make pages by creating new `.astro` files and placing them in the `src/pages/` folder.
+LOADING
 
-3. **Making Blog Posts**: This is my first blog post! I now have Astro pages and Markdown posts!
+## II: The Elusive Nature of Conciousness
 
-## What's next
-
-I will finish the Astro tutorial, and then keep adding more posts. Watch this space for more to come.
+LOADING
